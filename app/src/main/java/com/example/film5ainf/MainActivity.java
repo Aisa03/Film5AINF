@@ -17,6 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lvfilm = (ListView) findViewById(R.id.lvFilm);
         ArrayAdapter <String> aaFilm = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, film);
-
+        lvfilm.setAdapter(aaFilm);
     }
 }
