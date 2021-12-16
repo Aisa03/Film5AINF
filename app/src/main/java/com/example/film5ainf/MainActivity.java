@@ -17,14 +17,12 @@ public class MainActivity extends AppCompatActivity {
     ListView lvfilm;
     String film[] = {"Spiderman", "Titanic", "Batman"};
     Button btnesci;
-    ImageView imgavatar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lvfilm = (ListView) findViewById(R.id.lvFilm);
-        imgavatar = findViewById(R.id.imgape);
-        imgavatar.setImageResource(R.drawable.piaggio_ape_p50_06);
 
         ArrayAdapter <String> aaFilm = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, film);
         lvfilm.setAdapter(aaFilm);
