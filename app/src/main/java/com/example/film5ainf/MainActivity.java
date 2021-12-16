@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -15,13 +17,25 @@ public class MainActivity extends AppCompatActivity {
     ListView lvfilm;
     String film[] = {"Spiderman", "Titanic", "Batman"};
     Button btnesci;
+    ImageView imgavatar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lvfilm = (ListView) findViewById(R.id.lvFilm);
+        imgavatar = findViewById(R.id.imgape);
+        imgavatar.setImageResource(R.drawable.piaggio_ape_p50_06);
+
         ArrayAdapter <String> aaFilm = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, film);
         lvfilm.setAdapter(aaFilm);
+
+        //-----------------------------------------------------------------------------
+        lvfilm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //String titolo = (String) lvfilm.getItemAtPosition();
+            }
+        });
 
         btnesci = (Button) findViewById(R.id.btnesci);
         btnesci.setOnClickListener(new View.OnClickListener() {
