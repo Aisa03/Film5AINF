@@ -3,6 +3,7 @@ package com.example.film5ainf;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -31,7 +32,10 @@ public class MainActivity extends AppCompatActivity {
         lvfilm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //String titolo = (String) lvfilm.getItemAtPosition();
+                String titolo = (String) lvfilm.getItemAtPosition(position);
+                Log.d("errori_nostri", "posizione: "+ position);
+                Toast.makeText(getApplicationContext(),titolo)
+
             }
         });
 
