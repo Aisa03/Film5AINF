@@ -2,6 +2,7 @@ package com.example.film5ainf;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 String titolo = (String) lvfilm.getItemAtPosition(position);
                 Log.d("errori_nostri", "posizione: "+ position);
                 Toast.makeText(getApplicationContext(),titolo)
+                Intent i = new Intent(getApplicationContext(),)
 
             }
         });
